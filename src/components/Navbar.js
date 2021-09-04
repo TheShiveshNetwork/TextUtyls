@@ -4,7 +4,7 @@ export default function Navbar() {
     return (
         <div>
             <nav className="navbar px-3 navbar-expand-lg navbar-dark pd-3 bg-primary">
-            <a className="navbar-brand" href="#">TextUtyls</a>
+            <a className="navbar-brand" href="/">TextUtyls</a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>

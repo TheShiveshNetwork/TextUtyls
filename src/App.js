@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Navbar/>
-      <Form heading="Enter your text here"/>
+      <Form heading="Enter your text below"/>
     </>
   );
 }

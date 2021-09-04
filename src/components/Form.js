@@ -1,6 +1,13 @@
 import React, {useState} from 'react'
 
 export default function Form(props) {
+    const clear = ()=> {
+        let newtext = text.substr(0, -1);
+        setText(newtext);
+    }
+    const copy = ()=> {
+        navigator.clipboard.writeText(text)
+    }
     const upper = ()=> {
         let newtext = text.toUpperCase();
         setText(newtext);
@@ -24,6 +31,8 @@ export default function Form(props) {
                 <h1>TextUtyls</h1>
                 <label htmlFor="exampleFormControlTextarea1">{props.heading}</label>
                 <textarea className="thetext form-control mb-4" value={text} onChange={handleOnChange} id="exampleFormControlTextarea1" rows="12"></textarea>
+                <button type="button" onClick={clear} className="btn m-2 btn-primary">Clear Text</button>
+                <button type="button" onClick={copy} className="btn m-2 btn-primary">Copy Text</button>
                 <button type="button" onClick={upper} className="btn m-2 btn-primary">Upper Text</button>
                 <button type="button" onClick={capitalize} className="btn m-2 btn-primary">Capitalize Text</button>
                 <button type="button" onClick={remove_space} className="btn m-2 btn-primary">Remove Extra Spaces</button>
